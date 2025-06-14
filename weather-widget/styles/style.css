@@ -74,3 +74,10 @@ input::placeholder{
   font-family: Helvetica; 
   z-index: 10000; 
 }
+
+img {
+  display: none;
+  margin: 20px auto;
+  width: 100px;     /* adjust size */
+  height: 100px;    /* keep it square */
+}
