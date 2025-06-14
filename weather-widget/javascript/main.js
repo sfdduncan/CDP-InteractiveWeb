@@ -3,7 +3,7 @@ let input = document.querySelector(".zipcode");
 let btn = document.querySelector(".search-button");
 let form = document.querySelector("form");
 
-let CITY_NAME = document.querySelector(".city_name");
+let CITY_NAME = document.querySelector(".city-name");
 let CITY_TEMP = document.querySelector(".temperature");
 
 // write a function to get weather data
@@ -29,10 +29,13 @@ let CITY_TEMP = document.querySelector(".temperature");
   });
 }
 
-const getZipcode = e => {
-  e.preventDefault();
-  let ZIP_CODE = input.value;
-  getWeatherData(ZIP_CODE);
-}
+form.addEventListener("submit", function (e){
+    e.preventDefault();
+    const zip = input.value.trim();
 
-btn.addEventListener('click', getZipcode);
+     if (zip) {
+        getWeatherData(zip);
+    } else {
+        alert("Please enter a ZIP code.");
+  }
+}); 
