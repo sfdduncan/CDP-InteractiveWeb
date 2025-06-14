@@ -71,4 +71,5 @@ input::placeholder{
   line-height: 1.2em;
   color: white;
   font-family: Helvetica; 
+  z-index: 10000; 
 }
